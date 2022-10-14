@@ -1,0 +1,86 @@
+html.dark-mode {
+  body,
+  div#__nuxt,
+  div#__layout,
+  main {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $background-dark;
+  }
+
+  .title,
+  .card-header-title,
+  .input {
+    color: $text !important;
+  }
+
+  .link {
+    color: #fff !important;
+
+    &:hover {
+      color: $k-accentlight !important;
+    }
+  }
+
+  .navbar {
+    .navbar-dropdown a.navbar-item {
+      &:hover,
+      &:focus {
+        background-color: $primary;
+      }
+    }
+  }
+
+  .instance {
+    &-accent,
+    &-blue {
+      background-color: $dark-accent;
+    }
+  }
+
+  .landing-search {
+    .sub-title {
+      color: $search-background-color;
+      text-shadow: 1px 1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+        -1px -1px 0 #fff, 1px 0px 0 #fff, 0px 1px 0 #fff, -1px 0px 0 #fff,
+        0px -1px 0 #fff, 4px 4px #fff;
+    }
+  }
+
+  .footer-container {
+    background-color: $dark-accent;
+    border-top: 1px solid $white;
+
+    &-socials {
+      &-list {
+        &-item {
+          background: $black;
+          border: 1px solid $white;
+          box-shadow: $primary-shadow-dark;
+          &:hover {
+            background: $k-accent !important;
+          }
+        }
+      }
+    }
+
+    &-subs {
+      &-btn {
+        color: $black !important;
+        background-color: $k-accent !important;
+        border-radius: 0px;
+        border: 1px solid $white;
+        border-color: $white !important;
+        box-shadow: $primary-shadow-dark !important;
+      }
+      &-input {
+        box-shadow: $primary-shadow-dark;
+
+        .input {
+          border: 1px solid $white;
+        }
+      }
+    }
+  }
+}

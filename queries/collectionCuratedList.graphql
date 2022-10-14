@@ -1,0 +1,12 @@
+query collectionCuratedList($list: [String!]) {
+  collectionEntities(where: { id_in: $list }) {
+    id
+    issuer
+    name
+    meta {
+      id
+      name
+      image
+    }
+  }
+}

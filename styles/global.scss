@@ -1,0 +1,158 @@
+body {
+  .autocomplete .dropdown-item {
+    padding-right: 1px;
+  }
+  .select select,
+  .select select option,
+  .taginput .taginput-container.is-focusable,
+  .textarea {
+    color: $select-color;
+  }
+
+  .input {
+    color: $input-color;
+  }
+
+  .select-dropdown {
+    select {
+      border: 1px solid $select-border-color !important;
+    }
+
+    @media screen and (max-width: 1216px) and (min-width: 768px) {
+      width: 200px;
+    }
+  }
+
+  .select {
+    &:not(.is-multiple):not(.is-loading):hover::after {
+      border-color: $select-border-color;
+    }
+  }
+
+  .select select[disabled],
+  .taginput [disabled].taginput-container.is-focusable,
+  [disabled].textarea,
+  [disabled].input,
+  fieldset[disabled] .select select,
+  .select fieldset[disabled] select,
+  fieldset[disabled] .taginput .taginput-container.is-focusable,
+  .taginput fieldset[disabled] .taginput-container.is-focusable,
+  fieldset[disabled] .textarea,
+  fieldset[disabled] .input {
+    background-color: $scheme-main;
+  }
+
+  .label {
+    color: $primary;
+    text-transform: uppercase;
+    font-size: calc(1rem * 0.75);
+  }
+
+  .loading-overlay .loading-background {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .orientation {
+    perspective: 30em;
+  }
+
+  .b-tabs .tab-content {
+    padding: 1rem 0;
+  }
+
+  .money-cursor,
+  .money-cursor .button {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>💸</text></svg>"),
+      auto;
+  }
+
+  .message.is-primary .message-body {
+    color: $light-text;
+  }
+}
+
+
+@include mobile {
+  .column-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 -12px !important;
+  }
+}
+
+// global css for pagination
+.pagination-link {
+  border: none !important;
+  border-top: 1px solid $primary !important;
+}
+
+/* move to global */
+.is-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.force-clip {
+  max-width: 85%;
+  max-height: 24px;
+}
+
+.b-radio.radio.button.is-selected {
+  background-color: #db2980;
+}
+.b-radio.is-selected {
+  color: #000;
+  background-color: $primary;
+}
+
+.collection-radio-btn .b-radio.radio.button {
+  border: none !important;
+  border-top: 1px solid $primary !important;
+}
+
+.short-identity__table {
+  max-width: 50em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.type-table {
+  white-space: nowrap;
+}
+
+.collapseHidden {
+  .collapse-trigger {
+    display: none;
+  }
+}
+
+.box {
+  .box-container {
+    @media screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  @include tablet {
+    .short-name-column {
+      width: 20%;
+    }
+  }
+}
+
+.rmrk-logo {
+  aspect-ratio: 127 / 42;
+}
+
+.instance {
+  border-top: 1px solid black;
+  font-family: 'Work Sans';
+
+  &-accent {
+    background-color: $k-accent;
+  }
+
+  &-blue {
+    background-color: $k-blue;
+  }
+}
